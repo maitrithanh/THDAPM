@@ -1,0 +1,12 @@
+﻿@model IEnumerable<KTRA.Models.TacGia>
+
+<div class="title">Tac Gia</div>
+<ul class="list-group">
+    @foreach (var tg in Model)
+    {
+        <a href="@Url.Action("SachTheoTacGia", "Sach", new { id=tg.MaTacGia })"
+           class="list-group-item list-group-item-action">
+            @tg.TenTacGia
+        </a>
+    }
+</ul>
